@@ -65,7 +65,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                             switch (opA) {
                                                 case 1:
                                                     System.out.println("Ingrese el color del mono: 1. Negro 2. Gris");
-                                                    Color color;
+                                                    Color color = Color.BLACK;
                                                     int colorOp = input.nextInt();
                                                     switch (colorOp) {
                                                         case 1:
@@ -90,6 +90,8 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                     System.out.println("Ingrese el nombre del mono: ");
                                                     input = new Scanner(System.in);
                                                     String nomMono = input.nextLine();
+                                                    System.out.println("Ingrese el tipo sanguineo del mono: ");
+                                                    String tipSangM = input.next();
                                                     System.out.println("Ingrese el sexo: 1. Macho 2. Hembra");
                                                     int opSexoM = input.nextInt();
                                                     String sexoM = "";
@@ -107,7 +109,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                     double alturaM = input.nextDouble();
                                                     System.out.println("Ingrese el peso del mono: ");
                                                     int pesoM = input.nextInt();
-                                                    Mono m = new Mono(color, comidaMono, comidaPKMMono, planeta, lugNacimiento, nomMono, sexoM, alturaM, pesoM);
+                                                    Mono m = new Mono(color, comidaMono, comidaPKMMono, planeta, lugNacimiento, nomMono, tipSangM, sexoM, alturaM, pesoM);
                                                     listaMonos.add(m);
                                                     break;
                                                 case 2:
