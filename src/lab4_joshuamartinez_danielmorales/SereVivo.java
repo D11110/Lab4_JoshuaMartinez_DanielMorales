@@ -11,14 +11,14 @@ package lab4_joshuamartinez_danielmorales;
  */
 public class SereVivo {
     private String Nombre, sanguineo;
-    private char sexo;
+    private String sexo;
     private double altura;
     private int peso;
 
     public SereVivo() {
     }
 
-    public SereVivo(String Nombre, String sanguineo, char sexo, double altura, int peso) {
+    public SereVivo(String Nombre, String sanguineo, String sexo, double altura, int peso) {
         this.Nombre = Nombre;
         this.sanguineo = sanguineo;
         this.sexo = sexo;
@@ -42,11 +42,11 @@ public class SereVivo {
         this.sanguineo = sanguineo;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 

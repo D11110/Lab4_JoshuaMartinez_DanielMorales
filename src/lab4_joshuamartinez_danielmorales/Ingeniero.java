@@ -23,8 +23,9 @@ public class Ingeniero extends SereVivo{
     super();
     }
 
-    public Ingeniero(String correo, String usuario, String contraseña, Date nacimiento, String Nombre, String sanguineo, char sexo, double altura, int peso) {
+    public Ingeniero(String correo, String usuario, ArrayList idiomas, String contraseña, Date nacimiento, String Nombre, String sanguineo, String sexo, double altura, int peso) {
         super(Nombre, sanguineo, sexo, altura, peso);
+        setIdiomas(idiomas);
         this.correo = correo;
         this.usuario = usuario;
         this.contraseña = contraseña;
