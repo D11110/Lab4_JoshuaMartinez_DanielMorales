@@ -58,7 +58,7 @@ public class Primate extends SereVivo{
         return lugar_nacimiento;
     }
 
-    public void setNacimiento(Date nacimiento) {
+    public void setNacimiento(String lugar_nacimiento) {
         this.lugar_nacimiento = lugar_nacimiento;
     }
 
