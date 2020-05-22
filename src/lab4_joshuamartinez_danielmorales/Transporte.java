@@ -1,14 +1,57 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab4_joshuamartinez_danielmorales;
 
-/**
- *
- * @author joshu
- */
+import java.util.ArrayList;
+
 public class Transporte {
+    private int combustible =100, distancia;
+    private double altitud;
+    private ArrayList primates = new ArrayList();
+
+    public Transporte() {
+    }
+
+    public Transporte(int distancia, double altitud, ArrayList primates) {
+        setPrimates(primates);
+        this.distancia = distancia;
+        this.altitud = altitud;
+    }
+
+    public int getCombustible() {
+        return combustible;
+    }
+
+    public void setCombustible(int combustible) {
+        this.combustible = combustible;
+    }
+
+    public int getDistancia() {
+        return distancia;
+    }
+
+    public void setDistancia(int distancia) {
+        this.distancia = distancia;
+    }
+
+    public double getAltitud() {
+        return altitud;
+    }
+
+    public void setAltitud(double altitud) {
+        this.altitud = altitud;
+    }
+
+    public ArrayList getPrimates() {
+        return primates;
+    }
+
+    public void setPrimates(ArrayList primates) {
+        this.primates = primates;
+    }
+
+    @Override
+    public String toString() {
+        return "Transporte{" + "combustible=" + combustible + ", distancia=" + distancia + ", altitud=" + altitud + ", primates=" + primates + '}';
+    }
+    
     
 }
