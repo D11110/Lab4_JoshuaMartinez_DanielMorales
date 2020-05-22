@@ -10,6 +10,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
     
     static Scanner input =  new Scanner(System.in);
     static ArrayList usuarios = new ArrayList();
+    static ArrayList contraseñas = new ArrayList();
 
     public static void main(String[] args) throws ParseException {
         char resp = 's';
@@ -21,7 +22,27 @@ public class Lab4_JoshuaMartinez_DanielMorales {
             int op = input.nextInt();
             switch (op) {
                 case 1:
+                    boolean authenticated = false;
+                    System.out.println("Ingrese el usuario: ");
+                    String userRecibido = input.next();
+                    System.out.println("Ingrese la contraseña: ");
+                    String passRecibida = input.next();
+                    if (usuarios.contains(userRecibido)) {
+                        if (contraseñas.contains(passRecibida)) {
+                            authenticated = true;
+                        } else{
+                            System.out.println("Contraseña incorrecta");
+                        }
+                    } else{
+                        System.out.println("Usuario incorrecto");
+                    }
                     
+                    while (authenticated) {
+                        char respA = 's';
+                        while (respA=='s'||respA=='S') {
+                            
+                        }
+                    }
                     break;
                 case 2:
                     System.out.println("Bienvenido a la creacion de usuario");
@@ -63,6 +84,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                 System.out.println("Usuario ya existente");
                             } else {
                                 userOrigCheck = true;
+                                usuarios.add(usuario);
                             }
                         }
                     }
@@ -76,11 +98,14 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                     }
                     System.out.println("Ingrese su contraseña: ");
                     String contraseña = input.next();
+                    contraseñas.add(contraseña);
                     System.out.println("Ingrese su fecha de nacimiento: (dd/MM/yyyy)");
                     String fecha = input.nextLine();
                     input = new Scanner(System.in);
                     SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
                     Date fecha_nacimiento = sd.parse(fecha);
+                    Ingeniero i =  new Ingeniero(correo, usuario, idiomas, contraseña, fecha_nacimiento, nombre, grupoSang, sexo, altura, peso);
+                    
                     
                     
                     break;
