@@ -9,8 +9,8 @@ public class Gorila extends Primate{
         super();
     }
 
-    public Gorila(int IQ, Transporte transporte, int comida, int come_kilometro, String planeta, Date nacimiento, String Nombre, String sanguineo, String sexo, double altura, int peso) {
-        super(transporte, comida, come_kilometro, planeta, nacimiento, Nombre, sanguineo, sexo, altura, peso);
+    public Gorila(int IQ, Transporte transporte, int comida, int come_kilometro, String planeta, String lugar_nacimiento, String Nombre, String sanguineo, String sexo, double altura, int peso) {
+        super(transporte, comida, come_kilometro, planeta, lugar_nacimiento, Nombre, sanguineo, sexo, altura, peso);
         this.IQ = IQ;
     }
 
