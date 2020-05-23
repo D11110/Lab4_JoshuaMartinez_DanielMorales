@@ -42,6 +42,7 @@ public class Helicoptero extends AereoNormal{
 
     @Override
     public void viajar() {
+            
         int gasto, cantidad;
         int distan;
         int indice;
@@ -51,13 +52,14 @@ public class Helicoptero extends AereoNormal{
         distan = input.nextInt();
         
         if (super.getPrimates() == null || super.getPrimates().size() == 0) {
-            
+            System.out.println("No hay primates en la lista");
         }else{
             cantidad=super.combustible;
             indice=super.getPrimates().size();
+            for (int i = 0; i < indice; i++) {
             gasto = (cantidad/super.distancia)*distan;
-            comida = ((Primate)super.getPrimates().get(indice)).getComida();
-            gasto_comida = (comida/((Primate)super.getPrimates().get(indice)).getCome_kilometro())*distan;
+            comida = ((Primate)super.getPrimates().get(i)).getComida();
+            gasto_comida = (comida/((Primate)super.getPrimates().get(i)).getCome_kilometro())*distan;
             try {
                 validar(cantidad,gasto);
                 flag = false;
@@ -79,8 +81,8 @@ public class Helicoptero extends AereoNormal{
             cantidad=cantidad-gasto;
             super.combustible=cantidad;
             comida = comida-gasto_comida;
-            ((Primate)super.getPrimates().get(indice)).setComida(comida);
-            
+            ((Primate)super.getPrimates().get(i)).setComida(comida);
+            }
         }
     }
     
