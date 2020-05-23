@@ -970,8 +970,8 @@ public class Lab4_JoshuaMartinez_DanielMorales {
 
                                     break;
                                 case 3:
-                                    Helicoptero he = new Helicoptero();
-                                    he.viajar();
+                                    Transporte tr = new Transporte();
+                                    tr.viajar();
                                     break;
                                 case 4:
                                     respA='n';
