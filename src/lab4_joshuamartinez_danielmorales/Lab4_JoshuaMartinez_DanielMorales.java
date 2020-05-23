@@ -975,8 +975,37 @@ public class Lab4_JoshuaMartinez_DanielMorales {
 
                                     break;
                                 case 3:
-                                    Transporte tr = new Transporte();
-                                    tr.viajar();
+                                    System.out.println("1. Helicoptero");
+                                    System.out.println("2. Avion");
+                                    System.out.println("3. Nave");
+                                    System.out.println("4. Cohete");
+                                    System.out.print("Ingrese la nave que desea viajar: ");
+                                    int pos3;
+                                    pos3 = input.nextInt();
+                                    switch (pos3) {
+                                        case 1:
+                                            Transporte tr = new Helicoptero();
+                                            tr.viajar();
+                                            break;
+
+                                        case 2:
+                                            Transporte tr1 = new AvionComercial();
+                                            tr1.viajar();
+                                            break;
+
+                                        case 3:
+                                            Transporte tr2 = new NaveEspacial();
+                                            tr2.viajar();
+                                            break;
+
+                                        case 4:
+                                            Transporte tr3 = new Cohete();
+                                            tr3.viajar();
+                                            break;
+                                        default:
+                                            throw new AssertionError();
+                                    }
+
                                     break;
                                 case 4:
                                     System.exit(0);

@@ -71,47 +71,50 @@ public class Transporte implements Comportamiento {
         } else {
             System.out.println(combustible);
             System.out.println(distancia);
-//            cantidad = combustible;
-//            indice = primates.size();
-//            for (int i = 0; i < indice; i++) {
-//                gasto = (cantidad / distancia) * distan;
-//                comida = ((Primate) getPrimates().get(i)).getComida();
-//                gasto_comida = (comida / ((Primate) getPrimates().get(i)).getCome_kilometro()) * distan;
-//                try {
-//                    validar(cantidad, gasto);
-//                    flag = false;
-//                } catch (MIException ex) {
-//                    System.out.println(ex.getMessage());
-//                    try {
-//                        validar2(comida, gasto_comida);
-//                        flag2 = false;
-//                    } catch (MIException ew) {
-//                        System.out.println(ew.getMessage());
-//                    }
-//                } finally {
-//                    if (flag == true && flag2 == true) {
-//
-//                    } else {
-//                        System.out.println("Viaje exitoso");
-//                    }
-//                }
-//                cantidad = cantidad - gasto;
-//                combustible = cantidad;
-//                comida = comida - gasto_comida;
-//                ((Primate) getPrimates().get(i)).setComida(comida);
+            cantidad = combustible;
+            indice = primates.size();
+            for (int i = 0; i < indice; i++) {
+                gasto = (cantidad / distancia) * distan;
+                comida = ((Primate) getPrimates().get(i)).getComida();
+                gasto_comida = (comida / ((Primate) getPrimates().get(i)).getCome_kilometro()) * distan;
+                try {
+                    validar(cantidad, gasto);
+                    flag = false;
+                } catch (MIException ex) {
+                    System.out.println(ex.getMessage());
+                    try {
+                        validar2(comida, gasto_comida);
+                        flag2 = false;
+                    } catch (MIException ew) {
+                        System.out.println(ew.getMessage());
+                    }
+                } finally {
+                    if (flag == true && flag2 == true) {
+
+                    } else {
+                        System.out.println("Viaje exitoso");
+                    }
+                }
+                cantidad = cantidad - gasto;
+                combustible = cantidad;
+                comida = comida - gasto_comida;
+                ((Primate) getPrimates().get(i)).setComida(comida);
             }
         }
     }
     
-//    static void validar(int x, int y) throws MIException{
-//        if (x<y) {
-//            throw new MIException("No hay suficiente combustible");
-//        }
-//    }
-//    
-//    static void validar2(int x, int y) throws MIException{
-//        if (x<y) {
-//            throw new MIException("No hay suficiente comida para el viaje");
-//        }
-//    }
+    static void validar(int x, int y) throws MIException{
+        if (x<y) {
+            throw new MIException("No hay suficiente combustible");
+        }
+    }
+    
+    static void validar2(int x, int y) throws MIException{
+        if (x<y) {
+            throw new MIException("No hay suficiente comida para el viaje");
+        }
+    }
+    
+}
+    
 
