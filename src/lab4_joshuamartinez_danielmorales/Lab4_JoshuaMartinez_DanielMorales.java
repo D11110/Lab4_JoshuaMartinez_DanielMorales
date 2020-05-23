@@ -10,6 +10,7 @@ import java.util.Date;
 public class Lab4_JoshuaMartinez_DanielMorales {
 
     static Scanner input = new Scanner(System.in);
+    static boolean auth =  true;
     static ArrayList usuarios = new ArrayList();
     static ArrayList contraseñas = new ArrayList();
     static ArrayList listaIngenieros = new ArrayList();
@@ -37,7 +38,8 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                     String userRecibido = input.next();
                     System.out.println("Ingrese la contraseña: ");
                     String passRecibida = input.next();
-                    if (usuarios.contains(userRecibido)) {
+                    autenticar(userRecibido);
+                    if (auth) {
                         if (contraseñas.contains(passRecibida)) {
                             authenticated = true;
                         } else {
@@ -889,7 +891,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                         }
                                         break;
                                     case 3:
-                                        respB = 'n';
+                                        System.exit(0);
                                         break;
                                     default:
                                         System.out.println("Ingrese una opcion valida");
@@ -1012,6 +1014,16 @@ public class Lab4_JoshuaMartinez_DanielMorales {
             if (oh instanceof NaveEspacial) {
                 System.out.println("(" + listaMediosTransporte.indexOf(oh) + ") " + oh);
             }
+        }
+    }
+    
+    public static void autenticar(String usuario){
+        for (Object u : usuarios) {
+            String a = ((Ingeniero)usuarios.get( usuarios.indexOf(u))).getUsuario();
+            if (a.equalsIgnoreCase(usuario)) {
+                auth = true;
+            }
+            
         }
     }
 
