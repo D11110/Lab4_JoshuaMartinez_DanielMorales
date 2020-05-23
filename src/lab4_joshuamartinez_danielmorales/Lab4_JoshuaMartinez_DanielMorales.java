@@ -16,8 +16,8 @@ public class Lab4_JoshuaMartinez_DanielMorales {
     static ArrayList listaIngenieros = new ArrayList();
     static ArrayList listaMonos = new ArrayList();
     static ArrayList listaGorilas = new ArrayList();
-    static ArrayList listaMediosTransporte = new ArrayList();
-    static ArrayList listaPrimates = new ArrayList();
+    static ArrayList<Transporte> listaMediosTransporte = new ArrayList();
+    static ArrayList<SereVivo> listaPrimates = new ArrayList();
     static ArrayList listaHelicopteros = new ArrayList();
     static ArrayList listaAvionComercial = new ArrayList();
     static ArrayList listaCohete = new ArrayList();
@@ -54,7 +54,8 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                         while (respA == 's' || respA == 'S') {
                             System.out.println("1. CRUD Monos y gorilas \n"
                                     + "2. CRUD Medios de transporte \n"
-                                    + "3. Salir");
+                                    + "3. Viajar\n"
+                                    + "4. Salir\n");
                             int opMe = input.nextInt();
                             char respB = 's';
 
@@ -87,6 +88,10 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                             }
                                             System.out.println("Cuanta comida tendra el mono: ");
                                             int comidaMono = input.nextInt();
+                                            while (comidaMono < 1 || comidaMono > 100) {
+                                                System.out.println("Cuanta comida tendra el mono: ");
+                                                comidaMono = input.nextInt();
+                                            }
                                             System.out.println("Cuanta comida come por km: ");
                                             int comidaPKMMono = input.nextInt();
                                             System.out.println("Ingrese el planeta asignado: ");
@@ -159,6 +164,10 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                 case 2:
                                                     System.out.println("Ingrese la nueva cantidad de comida del mono: ");
                                                     int cantComMod = input.nextInt();
+                                                    while (cantComMod < 1 || cantComMod > 100) {
+                                                        System.out.println("Ingrese la nueva cantidad de comida del mono: ");
+                                                        cantComMod = input.nextInt();
+                                                    }
                                                     ((Mono) listaPrimates.get(indM)).setComida(cantComMod);
                                                     System.out.println("Cantidad de comida actualizado");
                                                     break;
@@ -240,6 +249,10 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                             }
                                             System.out.println("Ingrese cantidad de comida para gorila: ");
                                             int cantComGor = input.nextInt();
+                                            while (cantComGor < 1 || cantComGor > 100) {
+                                                System.out.println("Ingrese cantidad de comida para gorila: ");
+                                                cantComGor = input.nextInt();
+                                            }
                                             System.out.println("Ingrese cantidad de comida/km para gorila: ");
                                             int cantComGorPKM = input.nextInt();
                                             System.out.println("Ingrese el planeta de origen: ");
@@ -306,6 +319,10 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                 case 2:
                                                     System.out.println("Ingrese la nueva cantidad de comida: ");
                                                     int cantComModG = input.nextInt();
+                                                    while (cantComModG < 1 || cantComModG > 100) {
+                                                        System.out.println("Ingrese la nueva cantidad de comida: ");
+                                                        cantComModG = input.nextInt();
+                                                    }
                                                     ((Gorila) listaPrimates.get(indG)).setComida(cantComModG);
                                                     System.out.println("Cantidad de comida actualizada");
                                                     break;
@@ -439,7 +456,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                                 int indPrimAAgre = input.nextInt();
                                                                 primates.add(indPrimAAgre);
                                                             }
-                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n Diesel");
+                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n 3. Diesel");
                                                             int ind = input.nextInt();
                                                             String tipo_gasolina = "";
                                                             switch (ind) {
@@ -483,7 +500,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                                 automatico = false;
                                                             }
 
-                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n Diesel");
+                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n 3. Diesel");
                                                             int indi = input.nextInt();
                                                             String tipo_combustible = "";
                                                             switch (indi) {
@@ -515,7 +532,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                                 int indPrimAAgre = input.nextInt();
                                                                 primatesAv.add(indPrimAAgre);
                                                             }
-                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n Diesel");
+                                                            System.out.println("Ingrese el tipo de gasolina: 1. super \n 2. Regular \n 3. Diesel");
                                                             int indice = input.nextInt();
                                                             String gasolina = "";
                                                             switch (indice) {
@@ -919,11 +936,11 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                     input = new Scanner(System.in);
                                                     String planPaC = input.nextLine();
                                                     ((Cohete) listaMediosTransporte.get(indC)).setPlaneta_partidad(planPaC);
-                                                    
+
                                                     break;
                                                 case 4:
                                                     System.out.println("Ingrese el planeta de llegada: ");
-                                                    input= new Scanner(System.in);
+                                                    input = new Scanner(System.in);
                                                     String planLlegC = input.nextLine();
                                                     ((Cohete) listaMediosTransporte.get(indC)).setPlaneta_llegada(planLlegC);
                                                     break;
@@ -955,6 +972,9 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                 case 3:
                                     Helicoptero he = new Helicoptero();
                                     he.viajar();
+                                    break;
+                                case 4:
+                                    respA='n';
                                     break;
                                 default:
                                     System.out.println("Ingrese una opcion valida");
@@ -1027,7 +1047,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                     listaIngenieros.add(i);
                     break;
                 default:
-                    throw new AssertionError();
+                    System.exit(0);
             }
         }
     }
@@ -1087,7 +1107,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
             }
         }
     }
-    
+
     public static void mostrarT() {
         for (int i = 0; i < listaMediosTransporte.size(); i++) {
             System.out.println(i + ". " + listaMediosTransporte.get(i));
