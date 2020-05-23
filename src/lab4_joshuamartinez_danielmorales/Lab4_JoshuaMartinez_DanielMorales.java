@@ -57,9 +57,10 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                     + "3. Salir");
                             int opMe = input.nextInt();
                             char respB = 's';
-                            while (respB == 's' || respB == 'S') {
+                            
                                 switch (opMe) {
                                     case 1:
+                                        char respCrudM = 's';
                                         System.out.println("1. Crear mono \n"
                                                 + "2. Modificar mono \n"
                                                 + "3. Eliminar mono \n"
@@ -68,8 +69,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                 + "6. Eliminar gorila \n"
                                                 + "7. Salir \n");
                                         int opA = input.nextInt();
-                                        char respCrudM = 's';
-                                        while (respCrudM == 's' || respCrudM == 'S') {
+                                        
                                             switch (opA) {
                                                 case 1:
                                                     System.out.println("Ingrese el color del mono: 1. Negro 2. Gris");
@@ -381,10 +381,13 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                     int indElimG = input.nextInt();
                                                     listaGorilas.remove(indElimG);
                                                     break;
+                                                case 7:
+                                                    respB='n';
+                                                    break;
                                                 default:
                                                     System.out.println("Ingrese una opcion valida");
                                             }
-                                        }
+                                        
 
                                         break;
                                     case 2:
@@ -396,7 +399,6 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                 + "6. Eliminar metodo de transporte \n");
                                         int opCruMT = input.nextInt();
                                         char crudMTresp = 's';
-                                        while (crudMTresp == 's') {
                                             switch (opCruMT) {
                                                 case 1:
                                                     int opcion,
@@ -665,7 +667,6 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             + "8. Salir\n");
                                                     int opModH = input.nextInt();
                                                     char respModH = 's';
-                                                    while (respModH == 's') {
                                                         switch (opModH) {
                                                             case 1:
                                                                 System.out.println("Ingrese la nueva cantidad de helices: ");
@@ -724,7 +725,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             default:
                                                                 System.out.println("Ingrese una opcion valida");
                                                         }
-                                                    }
+                                                    
 
                                                     break;
                                                 case 3:
@@ -742,7 +743,6 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             + "8. Salir\n");
                                                     int opModA = input.nextInt();
                                                     char respModA = 's';
-                                                    while (respModA == 's') {
                                                         switch (opModA) {
                                                             case 1:
                                                                 System.out.println("Ingrese la nueva cantidad de pasajeros: ");
@@ -812,7 +812,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             default:
                                                                 System.out.println("Ingrese una opcion valida: ");
                                                         }
-                                                    }
+                                                    
                                                     break;
                                                 case 4:
                                                     mostrarNave();
@@ -885,17 +885,21 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                     }
 
                                                     break;
+                                                case 5:
+                                                    
+                                                    break;
                                                 default:
                                                     throw new AssertionError();
                                             }
-                                        }
+                                        
                                         break;
                                     case 3:
-                                        System.exit(0);
+                                        Helicoptero he = new Helicoptero();
+                                        he.viajar();
                                         break;
                                     default:
                                         System.out.println("Ingrese una opcion valida");
-                                }
+                                
                             }
                         }
                     }
