@@ -22,6 +22,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
     static ArrayList listaAvionComercial = new ArrayList();
     static ArrayList listaCohete = new ArrayList();
     static ArrayList listaNaveEspacial = new ArrayList();
+    static int cont = 0;
 
     public static void main(String[] args) throws ParseException {
         char resp = 's';
@@ -483,6 +484,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             Helicoptero h = new Helicoptero(helices, patas, tipo_gasolina, pais_partida, pais_llegada, distancia, altitud, primates);
                                                             listaMediosTransporte.add(h);
                                                             listaHelicopteros.add(h);
+                                                            listaMediosTransporte.get(cont).setDistancia(distancia);
                                                             break;
 
                                                         case 2:
@@ -559,6 +561,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             AvionComercial a = new AvionComercial(pasajeros, automatico, gasolina, pais_partida, pais_llegada, distancia, altitud, primatesAv);
                                                             listaMediosTransporte.add(a);
                                                             listaAvionComercial.add(a);
+                                                            listaMediosTransporte.get(cont).setDistancia(distancia);
                                                             break;
 
                                                         default:
@@ -618,6 +621,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             NaveEspacial n = new NaveEspacial(propulsores, tipo_combustible, planeta_partida, planeta_llegada, dis, alti, primatesNav);
                                                             listaMediosTransporte.add(n);
                                                             listaNaveEspacial.add(n);
+                                                            listaMediosTransporte.get(cont).setDistancia(dis);
                                                             break;
 
                                                         case 2:
@@ -659,6 +663,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             Cohete c = new Cohete(separaciones, tip_combustible, planeta_partida, planeta_llegada, dis, alti, primatesCo);
                                                             listaMediosTransporte.add(c);
                                                             listaCohete.add(c);
+                                                            listaMediosTransporte.get(cont).setDistancia(dis);
                                                             break;
                                                         default:
                                                             throw new AssertionError();
@@ -974,7 +979,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                     tr.viajar();
                                     break;
                                 case 4:
-                                    respA='n';
+                                    System.exit(0);
                                     break;
                                 default:
                                     System.out.println("Ingrese una opcion valida");
