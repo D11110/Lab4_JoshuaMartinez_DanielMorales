@@ -485,6 +485,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             listaMediosTransporte.add(h);
                                                             listaHelicopteros.add(h);
                                                             listaMediosTransporte.get(cont).setDistancia(distancia);
+                                                            cont++;
                                                             break;
 
                                                         case 2:
@@ -562,6 +563,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             listaMediosTransporte.add(a);
                                                             listaAvionComercial.add(a);
                                                             listaMediosTransporte.get(cont).setDistancia(distancia);
+                                                            cont++;
                                                             break;
 
                                                         default:
@@ -622,6 +624,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             listaMediosTransporte.add(n);
                                                             listaNaveEspacial.add(n);
                                                             listaMediosTransporte.get(cont).setDistancia(dis);
+                                                            cont++;
                                                             break;
 
                                                         case 2:
@@ -664,6 +667,7 @@ public class Lab4_JoshuaMartinez_DanielMorales {
                                                             listaMediosTransporte.add(c);
                                                             listaCohete.add(c);
                                                             listaMediosTransporte.get(cont).setDistancia(dis);
+                                                            cont++;
                                                             break;
                                                         default:
                                                             throw new AssertionError();
