@@ -36,6 +36,11 @@ public class AvionComercial extends AereoNormal{
     public String toString() {
         return "AvionComercial{" + "pasajeros=" + pasajeros + ", automatico=" + automatico + super.toString() +'}';
     }
+
+    @Override
+    public void viajar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

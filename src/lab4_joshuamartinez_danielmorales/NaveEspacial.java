@@ -24,7 +24,12 @@ public class NaveEspacial extends Espacial{
 
     @Override
     public String toString() {
-        return "NaveEspacial{" + "propulsores=" + propulsores + super.toString() +'}';
+        return "NaveEspacial{" + "propulsores=" + propulsores + super.toString() + '}';
+    }
+
+    @Override
+    public void viajar() {
+        
     }
     
     

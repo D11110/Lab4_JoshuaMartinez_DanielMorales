@@ -2,7 +2,7 @@ package lab4_joshuamartinez_danielmorales;
 
 import java.util.ArrayList;
 
-public class Espacial extends Transporte{
+public abstract class Espacial extends Transporte{
    private String tipo_combustible, planeta_partidad, planeta_llegada;
 
     public Espacial() {

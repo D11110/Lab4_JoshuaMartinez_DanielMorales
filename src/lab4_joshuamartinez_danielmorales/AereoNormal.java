@@ -2,7 +2,7 @@ package lab4_joshuamartinez_danielmorales;
 
 import java.util.ArrayList;
 
-public class AereoNormal extends Transporte{
+public abstract class AereoNormal extends Transporte{
     private String gasolina, pais_partida, pais_llegada;
 
     public AereoNormal() {

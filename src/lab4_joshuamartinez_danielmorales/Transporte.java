@@ -2,8 +2,8 @@ package lab4_joshuamartinez_danielmorales;
 
 import java.util.ArrayList;
 
-public class Transporte {
-    private int combustible =100, distancia;
+public abstract class Transporte implements Comportamiento{
+    protected int combustible =100, distancia;
     private double altitud;
     private ArrayList primates = new ArrayList();
 
@@ -53,5 +53,7 @@ public class Transporte {
         return "Transporte{" + "combustible=" + combustible + ", distancia=" + distancia + ", altitud=" + altitud + ", primates=" + primates + '}';
     }
     
-    
+   public void Viajar(){
+   
+   }
 }

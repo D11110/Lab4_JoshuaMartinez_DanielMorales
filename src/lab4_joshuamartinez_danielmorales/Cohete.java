@@ -26,6 +26,11 @@ public class Cohete extends Espacial{
     public String toString() {
         return "Cohete{" + "separaciones=" + separaciones + super.toString() +'}';
     }
+
+    @Override
+    public void viajar() {
+        
+    }
     
     
     
